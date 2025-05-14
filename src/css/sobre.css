@@ -41,6 +41,30 @@ header nav ul li a:hover{
     text-decoration: underline 2px black;
 }
 
+#contra-capa{
+    background: brown;
+    padding: 30vh 10vh;
+}
+
+#meio-caderno{
+    background: grey;
+    height: 50vh;
+    width: 5px;
+}
+#pagina{
+    background: #000000;
+    padding: 30vh 10vh;
+    
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 0;
+}
+
+
 
 
 
