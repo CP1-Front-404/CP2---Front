@@ -43,17 +43,30 @@ header nav ul li a:hover{
 
 #contra-capa{
     background: brown;
-    padding: 30vh 10vh;
+    padding-bottom: 60vh;
+    padding-right: 10vh;
+    padding-left: 10vh;
+
 }
+#contra-capa h2{
+    padding-top: 30px;
+    
+}
+
 
 #meio-caderno{
     background: grey;
-    height: 50vh;
+    height: 65vh;
     width: 5px;
 }
 #pagina{
-    background: #000000;
-    padding: 30vh 10vh;
+    background:rgb(88, 77, 77);
+    padding-bottom: 60vh;
+    padding-right: 10vh;
+    padding-left: 10vh;
+    max-width: 40vh;
+    max-height: 50vh;
+
     
 }
 
@@ -61,7 +74,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20vh 0;
+    padding: 10vh 0;
 }
 
 
