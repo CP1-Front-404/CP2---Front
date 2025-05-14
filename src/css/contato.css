@@ -40,7 +40,75 @@ header nav ul li a{
 header nav ul li a:hover{
     text-decoration: underline 2px black;
 }
-
-
-
+main{
+    display: flex;
+    padding: 15vh 0;
+    justify-content: center;
+    background-image: url("../assets/backgrond2.jpeg");
+}
+.linhadefundo{
+    background: #e74c3c;
+    height: 400px;
+    width: 50%;
+}
+.info{
+    display: block;
+    justify-content: left;
+    padding: 30px;
+    
+}
+#nomeContato{
+    font-size: 30px;
+    color: #EFEDE3;
+    
+}
+#infoContato{
+    font-size: 15px;
+    display: contents;
+    color: #b3b2b0;
+    padding: 30px;
+}
+.boxContato{
+    display: inline-block;
+    background: #F7FCFE;
+    width: 40%;
+    height: 400px;
+    border: 2px solid #1c1c1c:
+}
+.boxContato h1{
+    font-size: 40px;
+    margin: 20px;
+}
+.boxContato input{
+    width: 90%;
+    padding: 12px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.boxContato textarea{
+    width: 90%;
+    padding: 12px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.boxContato button{
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: 1px solid #000;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover{
+    border: 2px solid #000;
+}
+.linhadefundo2{
+    background: #e74c3c;
+    height: 400px;
+    width: 10%;
+}
 
