@@ -42,5 +42,16 @@ header nav ul li a:hover{
 }
 
 
+@media (max-width:780px) {
+    header{
+        font-size: 13px;
+    }
+    header nav ul li a{
+        font-size: 12px;
+    }
+
+    
+}
+
 
 

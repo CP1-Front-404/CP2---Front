@@ -91,15 +91,24 @@ main{
         font-size: 15px;
     }
     #pagina{
-        max-width: 23vh;
+        max-width: 20vh;
         font-size: 13px;
     }
     main{
-        padding: 10vh 3vh;
+        padding: 10vh 2vh;
+        
+        
+    }
+     header{
+        font-size: 15px;
+    }
+    header nav ul li a{
+        font-size: 12px;
     }
 
 
 }
+
 
 
 
