@@ -1,147 +1,175 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("../assets/atendimento.jpg");
+    background-size: 100%;
+    color: #333;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    /* Para preto translúcido: */
+    background:rgba(0,0,0,0.4); /* ajuste o 0.28 para mais/menos intensidade */
+    z-index: 0;
+    pointer-events: none; /* permite clicar nos botões, etc */
+}
+
+header {
     background: #fff;
-}
-
-header{
-    background: rgb(172, 15, 15);
+    border-bottom: 1.5px solid #e63946;
+    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.04);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 3px 2px 2px black;
-    padding: 20px;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-
-header nav ul{
+header h1 {
+    color: #e63946;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul {
     list-style: none;
     display: flex;
-    padding: 10px;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
 }
-header nav ul li{
-    padding: 0px 20px;
-}
-
-header nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color:#000000;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
+    color: #222;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+nav ul li a:hover {
+    color: #e63946;
 }
 
-header nav ul li a:hover{
-    text-decoration: underline 2px black;
-}
-
-
-main{
+main {
+    min-height: 90vh;
     display: flex;
-    padding: 25vh 0;
+    align-items: center;
     justify-content: center;
-    background-image: url("../assets/backgrond2.jpeg");
-    
+    padding: 60px 0;
 }
-.linhadefundo{
-    background: #e74c3c;
-    height: 400px;
-    width: 50%;
+
+.contato-container {
+    display: flex;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    border-radius: 20px;
+    max-width: 900px;
+    width: 95vw;
+    gap: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
-.info{
-    display: block;
-    justify-content: left;
-    padding: 30px;
-    
+
+.contato-info {
+    background:  rgba(255,255,255,0.98);
+    padding: 40px 32px;
+    flex: 1.3;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1.5px solid #f0eaea;
 }
-#nomeContato{
-    font-size: 30px;
-    color: #EFEDE3;
-    
+.contato-info h2 {
+    color: #e63946;
+    font-size: 1.1rem;
+    margin: 18px 0 6px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
-#infoContato{
-    font-size: 15px;
-    display: contents;
-    color: #706e69;
-    padding: 30px;
+.contato-info p {
+    margin-bottom: 14px;
+    font-size: 1.02rem;
+    color: #333;
 }
-.boxContato{
-    display: inline-block;
-    background: #F7FCFE;
-    width: 40%;
-    height: 400px;
-    border: 2px solid #1c1c1c;
+
+.contato-form {
+    background:#e5e5e5;
+    padding: 40px 32px;
+    flex: 2;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.boxContato h1{
-    font-size: 40px;
-    margin: 20px;
+.contato-form h1 {
+    color: #e63946;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-family: 'Merriweather', Georgia, serif;
 }
-.boxContato input{
-    width: 90%;
-    padding: 12px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
-.boxContato textarea{
-    width: 90%;
-    padding: 12px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+.contato-form input, .contato-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1.3px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fff;
+    transition: border 0.2s;
 }
-.boxContato button{
-    padding: 10px 20px;
-    margin-left: 20px;
-    border: 1px solid #000;
-    background: none;
-    cursor: pointer;
+.contato-form input:focus, .contato-form textarea:focus {
+    border-color: #e63946;
+    outline: none;
+}
+.contato-form button {
+    width: fit-content;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 7px;
     font-weight: bold;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-end;
 }
-button:hover{
-    border: 2px solid #000;
-}
-.linhadefundo2{
-    background: #e74c3c;
-    height: 400px;
-    width: 10%;
-}
-
-@media (max-width:780px) {
-    header{
-        font-size: 15px;
-    }
-    header nav ul li a{
-        font-size: 12px;
-    }
-
-    main{
-        padding: 8vh 0;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .linhadefundo2{
-        height: 0px;
-        width: 0px;
-    }
-    .linhadefundo{
-        width: 100%;
-
-    }
-    .boxContato{
-        width: 100%;
-
-    }
-
-    
+.contato-form button:hover {
+    background: #d82b3c;
 }
 
-
+/* Responsivo */
+@media (max-width: 900px) {
+    .contato-container {
+        flex-direction: column;
+        border-radius: 16px;
+        max-width: 99vw;
+    }
+    .contato-info, .contato-form {
+        border-radius: 16px;
+        padding: 30px 7vw;
+    }
+    .contato-form {
+        padding-top: 15px;
+    }
+}
