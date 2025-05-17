@@ -1,3 +1,5 @@
+/* Estilo geral para o site do restaurante */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,8 +48,8 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   position: relative;
+  color: white;
 }
 
 .hero::before {
@@ -69,6 +71,7 @@ nav ul li a:hover {
 .hero h1 {
   font-size: 48px;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .hero p {
@@ -91,11 +94,11 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #ffffff;
+  background: #3d3f41;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  border-top: 1px solid #ddd;
+  color: #fff;
 }
 
 footer .social a {
@@ -105,80 +108,44 @@ footer .social a {
   font-weight: 500;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
 
-#container {
-    text-align: center; 
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 
-.botao {
-    display: inline-block;
-    margin-top: 10px;
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .btn {
     padding: 10px 20px;
-    background-color: #b22222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 15px;
-    transition: 0.7s;
+    font-size: 14px;
+  }
 }
 
-.botao:hover {
-    background-color: #8b0000;
-}
-h2{
-    background-image: url(/src/assets/background3.avif);
-    padding: 120px;
-    background-size: cover;
-    background-position: flex-start;
-    border-radius: 60px;
-    font-size: 50px;
-    text-shadow: 2px 2px 1px black;
-    border: 2px double black;
-}
-h1{
-    color: #000000;
-    font-size: 40px;
-    margin: button 30px;
-}
-h2{
-    color: #b22222;
-    margin-bottom: 30px;
-}
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 20px;
+  }
 
-.apresentacao p{
-    gap: 20px;
-    font-size: 30px;
-    color: rgb(122, 4, 4);
+  nav ul {
+    align-items: flex-start;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }
-
-.destaques{
-    align-items: center;
-    
-}
-
-.destaques ul{
-    display: flex;
-    gap: 60px;
-    justify-content: center;
-    padding-top: 20px;
-
-}
-
-/* FOOOTER */
-
-footer{
-    background: #3d3f41; 
-    color:#fff;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-.footer-content{
-    display: flex;
-    justify-content: space-around;
-    max-width: 100%;
-    margin: auto;
-}
-
