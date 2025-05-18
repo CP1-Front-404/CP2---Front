@@ -137,8 +137,6 @@ main {
     margin-bottom: 0; /* evita espaço extra no final */
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
   #sobre-container {
     flex-direction: column;
     max-width: 98vw;
@@ -152,4 +150,8 @@ main {
   .sobre-esquerda img {
     margin-bottom: 16px;
   }
+
+/* Responsivo */
+@media (max-width: 900px) {
+
 }
