@@ -179,6 +179,22 @@ main article:hover {
   min-width: 80px;
 }
 
+footer {
+  background: #3d3f41;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #fff;
+}
+
+footer .social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #e63946;
+  font-weight: 500;
+}
+
+
 /* Responsividade */
 @media (max-width: 768px) {
   header {

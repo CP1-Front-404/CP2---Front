@@ -1,13 +1,18 @@
-
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url("../assets/restaurante.jpg") center center / cover no-repeat fixed;
     color: #333;
     min-height: 100vh;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
-
 
 header {
     background: #fff;
@@ -48,12 +53,13 @@ body::before {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    background: rgba(255,255,255,0.6); /* Ou 0.8 para mais branco, ou 0.6 para menos */
+    background: rgba(255,255,255,0.6);
     z-index: 0;
 }
 
+/* Layout principal */
 main {
-    min-height: 100vh;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,6 +80,7 @@ main {
     z-index: 1;
 }
 
+/* Capa do livro */
 .sobre-esquerda {
     background: #f5e7ce;
     padding: 36px 28px;
@@ -130,28 +137,52 @@ main {
     line-height: 1.7;
     margin: 0;
     text-align: left;
-    margin-bottom: 1.1em; /* aumenta o espaço entre parágrafos */
+    margin-bottom: 1.1em;
 }
-
 .sobre-direita p:last-child {
-    margin-bottom: 0; /* evita espaço extra no final */
+    margin-bottom: 0;
 }
 
-  #sobre-container {
-    flex-direction: column;
-    max-width: 98vw;
-    border-radius: 16px;
-  }
-  #meio-caderno { display: none; }
-  .sobre-esquerda, .sobre-direita {
-    padding: 18px 8vw 18px 8vw;
-    border-radius: 16px;
-  }
-  .sobre-esquerda img {
-    margin-bottom: 16px;
-  }
+/* Footer bonito e colado no rodapé */
+footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+    text-align: center;
+    padding: 20px 0 10px;
+    color: #e63946;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 24px;
+    position: relative;
+    z-index: 2;
+}
+footer .social {
+    margin-top: 10px;
+}
+footer .social a {
+    margin: 0 12px;
+    color: #e63946;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+footer .social a:hover {
+    text-decoration: underline;
+}
 
-/* Responsivo */
+/* RESPONSIVO */
 @media (max-width: 900px) {
-
+    #sobre-container {
+        flex-direction: column;
+        max-width: 98vw;
+        border-radius: 16px;
+    }
+    #meio-caderno { display: none; }
+    .sobre-esquerda, .sobre-direita {
+        padding: 18px 8vw 18px 8vw;
+        border-radius: 16px;
+    }
+    .sobre-esquerda img {
+        margin-bottom: 16px;
+    }
 }
